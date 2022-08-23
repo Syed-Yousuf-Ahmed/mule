@@ -20,4 +20,7 @@ payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
 	</flow>
+	<flow name="testprojectFlow1" doc:id="3e517cef-7bf6-4711-a944-3484b58e5a39" >
+		<set-payload value="#[payload]" doc:name="Copy_of_Set Payload" doc:id="edd1ee28-c025-4895-a727-53a53f713b92" />
+	</flow>
 </mule>
