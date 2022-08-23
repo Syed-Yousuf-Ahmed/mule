@@ -18,5 +18,7 @@ output application/json
 payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<set-variable value="sdsd" doc:name="Set Variable" doc:id="ee7955db-6465-485f-88f9-d9c187861485" variableName="dsd"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="1ee88192-3989-4dfa-8491-8cc8260e2d85" />
 	</flow>
 </mule>
