@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="testprojectFlow" doc:id="62802938-7897-48d5-ba8a-fc8bd65fcce5" >
 		<http:listener doc:name="Listener" doc:id="de120a1c-fc7c-45cf-a44b-efb8e21c8f9b" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="fad24979-064e-4729-a559-e60c20f5cfe8" />
 		<ee:transform doc:name="Transform Message" doc:id="c61110cb-14ec-4085-82cd-f4f7ad5509ff" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
@@ -18,7 +19,8 @@ output application/json
 payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<set-variable value="sdsd" doc:name="Set Variable" doc:id="ee7955db-6465-485f-88f9-d9c187861485" variableName="dsd"/>
-		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="1ee88192-3989-4dfa-8491-8cc8260e2d85" />
+	</flow>
+	<flow name="testprojectFlow1" doc:id="3e517cef-7bf6-4711-a944-3484b58e5a39" >
+		<set-payload value="#[payload]" doc:name="Copy_of_Set Payload" doc:id="edd1ee28-c025-4895-a727-53a53f713b92" />
 	</flow>
 </mule>
