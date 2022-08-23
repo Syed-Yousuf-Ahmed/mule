@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	</http:listener-config>
 	<flow name="testprojectFlow" doc:id="62802938-7897-48d5-ba8a-fc8bd65fcce5" >
 		<http:listener doc:name="Listener" doc:id="de120a1c-fc7c-45cf-a44b-efb8e21c8f9b" config-ref="HTTP_Listener_config" path="/test"/>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="fad24979-064e-4729-a559-e60c20f5cfe8" />
 		<ee:transform doc:name="Transform Message" doc:id="c61110cb-14ec-4085-82cd-f4f7ad5509ff" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
